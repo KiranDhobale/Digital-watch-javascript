@@ -1,0 +1,268 @@
+
+.menu {
+
+  padding: 9px 0px;
+  margin: 181px 0px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  background-color: black;
+  border-radius: 0px;
+  bottom: 70%;
+  display: flex;
+
+}
+.menu li a{
+  
+  padding: 0px 20px;
+  text-decoration: none;
+  color: white;
+  float: left;
+  /* padding: 0px 20px; */
+  font-size: 17px;
+  display: inline;
+}
+
+.menu li a:hover {
+  color: red;
+}
+
+.search {
+  float: right;
+  color: white;
+  position: absolute;
+  margin: 0px 24px;
+  right: 90px;
+
+  border-radius: 25px;
+
+}
+.search:hover{
+  box-shadow:2px 1px 15px 3px #99A3A4 ;
+}
+
+.menu input {
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 2px 32px;
+  width: 185px;
+  float: right;
+
+}
+.digi{
+  /* padding: 5px 6px; */
+  /* padding-top: 40%; */
+  margin: 0% -10%;
+
+  position: absolute;
+  width: auto;
+  bottom: 205px;
+  /* left: center; */
+  
+  padding: 20px;
+  border: 1px solid #FF5733;
+  border-radius: 5px;
+
+  border: none;
+  outline: none;
+  color: white;
+  background: black;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 90px;
+  right: -195px;
+  font-family: "Segoe UI", sans-serif;
+}
+.digi::before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.digi:active {
+  color: black
+}
+
+.digi:active:after {
+  background: transparent;
+}
+
+.digi:hover:before {
+  opacity: 1;
+}
+
+.digi:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:black ;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #10101E;
+    
+  }
+  
+  .datetime{
+    color: #fff;
+    background: #10101E;
+    font-family: "Segoe UI", sans-serif;
+    width: 340px;
+    padding: 15px 10px;
+    border: 3px solid #2E94E3;
+    border-radius: 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    -moz-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+  }
+  
+  .datetime:hover{
+    background: #2E94E3;
+    box-shadow: 0 0 30px #2E94E3;
+  }
+  
+  .date{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .time{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .time span:not(:last-child){
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .time span:last-child{
+    background: #2E94E3;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+  }
+  
+.footer-basic {
+  padding:3px 0;
+  /* background-color:#000000; */
+  color:#000000;
+  padding: 0px;
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  height: 156px;
+  
+}
+
+.footer-basic ul {
+  padding:0px;
+  list-style:none;
+  text-align:center;
+  font-size:14px;
+  line-height:1.1;
+  margin-bottom:61px;
+  color: rgb(97, 67, 67);
+  margin-top: 0%;
+  background-color:#778080 ;
+  
+ 
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+  color: rgb(144, 141, 141);
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:0px;
+  margin-bottom: 0px;
+  margin-top: -52px;
+  padding: 4px 648px;
+  position: absolute;
+  background-color: white;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid black;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+  padding: 1px;
+} 
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+  color: #000000;
+}
+
+.footer-basic .copyright {
+  margin-top: 133px;
+  text-align:center;
+  font-size:14px;
+  color:rgb(247, 226, 122);
+  margin-bottom:0;
+  padding: 3px 0px;
+  background-color: slateblue;
+}
